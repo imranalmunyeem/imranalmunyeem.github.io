@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — Imran Al Munyeem</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%239a3412'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' font-style='italic' fill='%23fdfcf8' text-anchor='middle'>M</text></svg>">
+
+  <script>
+    (function () {
+      try {
+        var r = document.documentElement;
+        r.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+        r.setAttribute('data-accent', localStorage.getItem('accent') || 'amber');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-accent', 'amber');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css?v=9">
+
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 0.5rem;
+    }
+    .notfound .code {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(4rem, 18vw, 9rem);
+      line-height: 1;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+    .notfound h1 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-top: 0.5rem;
+    }
+    .notfound p {
+      color: var(--fg-muted);
+      max-width: 42ch;
+      margin: 0.5rem auto 1.5rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="notfound">
+    <div class="code">404</div>
+    <h1>This page wandered off</h1>
+    <p>The page you are looking for doesn't exist or may have moved. Let's get you back on track.</p>
+    <a href="/" class="btn btn-primary">
+      Back to home
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+    </a>
+  </main>
+</body>
+</html>

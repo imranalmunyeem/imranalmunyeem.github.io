@@ -30,7 +30,7 @@ sections.forEach(s => io.observe(s));
   if (!toggleBtn || !panel) return;
 
   const getTheme = () => root.getAttribute('data-theme') || 'light';
-  const getAccent = () => root.getAttribute('data-accent') || 'emerald';
+  const getAccent = () => root.getAttribute('data-accent') || 'brown';
 
   const syncActive = () => {
     panel.querySelectorAll('[data-mode]').forEach(b =>
@@ -95,34 +95,6 @@ const esc = (s) => String(s).replace(/[&<>"']/g, c =>
       </a>`;
     }).join('');
     box.hidden = false;
-  } catch (e) { /* API unreachable — keep section hidden */ }
-})();
-
-// Recently updated public GitHub repositories
-(async function () {
-  const wrap = document.getElementById('ghLive');
-  const grid = document.getElementById('ghGrid');
-  if (!wrap || !grid) return;
-  try {
-    const res = await fetch('https://api.github.com/users/imranalmunyeem/repos?sort=pushed&per_page=30');
-    if (!res.ok) return;
-    const repos = await res.json();
-    if (!Array.isArray(repos)) return;
-    const picks = repos
-      .filter(r => !r.fork && r.name.toLowerCase() !== 'imranalmunyeem.github.io')
-      .slice(0, 6);
-    if (picks.length === 0) return;
-    grid.innerHTML = picks.map(r => {
-      const stars = r.stargazers_count > 0 ? `<span>★ ${r.stargazers_count}</span>` : '';
-      const lang = r.language ? `<span><span class="gh-dot"></span>${esc(r.language)}</span>` : '';
-      const when = new Date(r.pushed_at).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-      return `<a class="gh-card" href="${esc(r.html_url)}" target="_blank" rel="noopener">
-        <h4>${esc(r.name)}</h4>
-        <p>${esc(r.description || 'No description')}</p>
-        <div class="gh-meta">${lang}${stars}<span>Updated ${esc(when)}</span></div>
-      </a>`;
-    }).join('');
-    wrap.hidden = false;
   } catch (e) { /* API unreachable — keep section hidden */ }
 })();
 

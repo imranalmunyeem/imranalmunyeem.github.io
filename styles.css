@@ -72,6 +72,9 @@
 :root[data-accent="rose"] { --accent: #fb7185; --accent-dark: #fda4af; }
 :root[data-theme="light"][data-accent="rose"] { --accent: #be123c; --accent-dark: #9f1239; }
 
+:root[data-accent="brown"] { --accent: #c69a6d; --accent-dark: #e0bd94; }
+:root[data-theme="light"][data-accent="brown"] { --accent: #7a4a2b; --accent-dark: #5c3720; }
+
 /* ============================================================
    RESET + BASE
    ============================================================ */
@@ -626,6 +629,11 @@ img, svg {
   border-color: var(--border-strong);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
+}
+
+.social-icon-only {
+  padding: 0.5rem;
+  justify-content: center;
 }
 
 .placeholder-link {

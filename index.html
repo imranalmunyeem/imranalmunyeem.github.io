@@ -38,15 +38,15 @@
       try {
         var r = document.documentElement;
         r.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
-        r.setAttribute('data-accent', localStorage.getItem('accent') || 'emerald');
+        r.setAttribute('data-accent', localStorage.getItem('accent') || 'brown');
       } catch (e) {
         document.documentElement.setAttribute('data-theme', 'light');
-        document.documentElement.setAttribute('data-accent', 'emerald');
+        document.documentElement.setAttribute('data-accent', 'brown');
       }
     })();
   </script>
 
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=16">
 
   <script type="application/ld+json">
   {
@@ -124,6 +124,7 @@
           </div>
           <p class="theme-panel-label">Accent</p>
           <div class="theme-accents">
+            <button type="button" class="swatch" data-accent="brown" style="--sw:#8a5a34" aria-label="Brown"></button>
             <button type="button" class="swatch" data-accent="amber" style="--sw:#f59e0b" aria-label="Amber"></button>
             <button type="button" class="swatch" data-accent="emerald" style="--sw:#34d399" aria-label="Emerald"></button>
             <button type="button" class="swatch" data-accent="sky" style="--sw:#60a5fa" aria-label="Sky"></button>
@@ -206,14 +207,13 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="1" y="4" width="22" height="16" rx="3"/><text x="12" y="15.5" font-size="7" font-family="Arial, sans-serif" font-weight="700" fill="var(--bg-raised)" text-anchor="middle">DEV</text></svg>
                 DEV
               </a>
+
+              <a href="https://x.com/imranal_munyeem" class="social-link social-icon-only" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
             </div>
 
             <div class="social-row">
-
-              <a href="https://x.com/imranal_munyeem" class="social-link" target="_blank" rel="noopener">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            
-              </a>
               <a href="https://drive.google.com/file/d/1HPV53WMpcphYSXeUqaOmOcscOz2iS2CY/view?usp=sharing" class="hero-cv" target="_blank" rel="noopener">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download CV
@@ -882,7 +882,7 @@
       </ol>
     </section>
 
-<section class="section" id="experience">
+    <section class="section" id="experience">
       <div class="section-head">
         <p class="section-label">Experience</p>
         <h2 class="section-title">Professional work experience.</h2>
@@ -895,7 +895,7 @@
             <p class="timeline-when">2026 — Present</p>
             <h3 class="timeline-role">PhD Researcher in Computer Science</h3>
             <p class="timeline-org">Nottingham Trent University</p>
-            <p class="timeline-desc">Doctoral researcher in cybersecurity, hybrid cyber range architectures, and cyber-physical systems — designing secure, scalable, and realistic cyber experimentation and training environments.</p>
+            <p class="timeline-desc">Salaried doctoral researcher in cybersecurity, hybrid cyber range architectures, and cyber-physical systems — designing secure, scalable, and realistic cyber experimentation and training environments.</p>
           </div>
         </li>
 
@@ -1104,6 +1104,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=14" defer></script>
+  <script src="script.js?v=16" defer></script>
 </body>
 </html>
